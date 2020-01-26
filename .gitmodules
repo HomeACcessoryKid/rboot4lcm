@@ -1,0 +1,4 @@
+[submodule "rboot"]
+	path = rboot
+	url = https://github.com/HomeACcessoryKid/rboot
+	branch = rboot4lcm
