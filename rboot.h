@@ -35,6 +35,7 @@
 #define SYSPARAM_SECTOR 0xf7
 // we use a default that knows about LifeCycleManager ota_main
 #define BOOT_CUSTOM_DEFAULT_CONFIG
+#define COUNT4USER 4 //powercycle count that will not yet trigger ota-main
 
 // Call 'main' rboot.h to pick up defaults for other parameters
 #include_next "rboot.h"
