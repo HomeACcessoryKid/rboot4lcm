@@ -6,15 +6,17 @@ https://github.com/raburton/rboot
 Wrapper `rboot4lcm` to complement [homeaccessorykid/life-cycle-manager](https://github.com/homeaccessorykid/life-cycle-manager)
 -------------------------------------------------------------------
 The objective of this repo is to make rboot recognize multiple power reboots
-in short time. If detected, the lcm ota-main sector will be launched. The amount
-of power cycles will be conveyed to the booted app. Ota-main will be able to erase bad settings.  
+in short time. If detected, either the user code or the lcm ota-main sector will be launched. The amount
+of power cycles will be conveyed to the booted code. Values 1-4 are for the normal user code.
+
+Ota-main will be able to erase bad settings. See [LCM](https://github.com/homeaccessorykid/life-cycle-manager) for more details.  
 This provides a fallback at all times to recover from bad user code or to change the user repository.
 Most of the actual functionality will be made in the module rboot
 
 To make rboot4lcm use  
 `make clean all`
 
-To collect count in your app, use this sample
+To collect count in YOUR app, use this sample
 ```
 #include <rboot-api.h>
 int count=0;
