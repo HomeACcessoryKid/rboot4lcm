@@ -65,4 +65,3 @@ clean:
 
 monitor:
 	$(SDK_PATH)/$(FILTEROUTPUT) --port $(ESPPORT) --baud 115200 --elf $(BUILD_DIR)/rboot.elf
-#	$(SDK_PATH)/$(FILTEROUTPUT) --port $(ESPPORT) --baud 172800 --elf $(BUILD_DIR)/rboot.elf

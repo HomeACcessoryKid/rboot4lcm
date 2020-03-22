@@ -24,15 +24,13 @@
 //#define BOOT_BAUDRATE 74880
 
 // to define the time within a new powercycle/reboot will be counted
-#define BOOT_CYCLE_DELAY_MICROS 1000000 //1 second?
+#define BOOT_CYCLE_DELAY_MICROS 1000000 //1 second? NO, actually this is 1.5 seconds but that is OK...
 // indicates where the powercycle tracker bits are stored,
 // first half for continue-bits, last half for start-bits
 // other space between rboot-config and this address can be used for other purposes
 #define BOOT_BITS_ADDR 0x1020 // target value 0x1020
 // where the LCM ota_main code sits -> becomes rom1
 #define OTA_MAIN_SECTOR 0x8d
-// where sysparams sit, which will be wiped in case of full factory reset
-#define SYSPARAM_SECTOR 0xf7
 // we use a default that knows about LifeCycleManager ota_main
 #define BOOT_CUSTOM_DEFAULT_CONFIG
 #define COUNT4USER 4 //powercycle count that will not yet trigger ota-main
