@@ -12,6 +12,8 @@
 BOOTLOADER_DIR:=$(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 FLASH_SIZE ?= 8
+FLASH_MODE ?= dout
+FLASH_SPEED ?= 40
 
 include $(SDK_PATH)/parameters.mk
 
